@@ -15,6 +15,10 @@
             "yarn run format"
         ]
     },
+    "engines": {
+        "node": "16.16.0",
+        "yarn": "3.2.4"
+    },
     "packageManager": "yarn@3.2.4",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.32",
