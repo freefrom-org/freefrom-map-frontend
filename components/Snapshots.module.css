@@ -14,9 +14,7 @@
   font-size: 6vw;
   font-weight: 700;
   text-transform: uppercase;
-  border-bottom-width: 1;
-  border-bottom-style: solid;
-  border-bottom-color: #000;
+  border-bottom: 3px solid #000;
   padding-bottom: 0.2em;
   margin-bottom: 0.5em;
 }
@@ -45,7 +43,7 @@
   .snapshot-label-count {
     font-size: 4vw;
   }
-  
+
   .snapshot-label-category {
     font-size: 1.75vw;
   }
@@ -65,7 +63,7 @@
   .snapshot-label-count {
     font-size: 3vw;
   }
-  
+
   .snapshot-label-category {
     font-size: 1.25vw;
   }
