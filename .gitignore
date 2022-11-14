@@ -24,6 +24,7 @@ yarn-error.log*
 
 .idea
 .next
+.yarn
 
 # use yarn
 package-lock.json
