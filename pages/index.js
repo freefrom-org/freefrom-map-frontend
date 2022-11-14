@@ -7,6 +7,7 @@ import StateUpdates from 'components/common/StateUpdates'
 import TakeAction from 'components/common/TakeAction'
 import SharedLayout from 'components/SharedLayout'
 import StatesList from 'components/StatesList'
+import Snapshots from 'components/Snapshots'
 import UsMap from 'components/UsMap'
 import { getStates } from 'lib/contentful-api'
 
@@ -73,6 +74,7 @@ function Home({ states }) {
                         }
                     />
                 </div>
+                <Snapshots />
 
                 <h2 className='mt-5'>States to Watch</h2>
                 <div className='d-flex flex-column col-lg-10 m-0 p-0'>
