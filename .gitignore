@@ -28,6 +28,7 @@ yarn-error.log*
 
 # use yarn
 package-lock.json
+.yarnrc.yml
 
 # local cache of backend data for syncing
 scripts/localData
