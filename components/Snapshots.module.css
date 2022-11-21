@@ -26,6 +26,9 @@
   text-transform: uppercase;
 }
 
+.linebreak {
+  display: none;
+}
 
 /* @media (min-width: 576px) { ... } */
 
@@ -47,6 +50,7 @@
   .snapshot-label-category {
     font-size: 1.75vw;
   }
+
 }
 
 @media (min-width: 992px) {
@@ -66,6 +70,10 @@
 
   .snapshot-label-category {
     font-size: 1.25vw;
+  }
+
+  .linebreak {
+    display: unset;
   }
 }
 
