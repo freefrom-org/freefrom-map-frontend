@@ -11,16 +11,18 @@
 }
 
 .take-action-text {
-    color: #fff;
+    color: #000;
     font-size: 42px;
     line-height: 42px;
     text-transform: none;
 }
 
-.take-action-link:hover, .take-action-link:active {
+.take-action-link:hover,
+.take-action-link:active {
     text-decoration: none;
 }
 
-.take-action-box:hover, .take-action-box:active {
+.take-action-box:hover,
+.take-action-box:active {
     background-image: linear-gradient(rgba(0, 0, 0, 0.08) 0 0);
 }

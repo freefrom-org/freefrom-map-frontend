@@ -13,23 +13,23 @@ function Footer() {
             }
         >
             <div className='py-2 my-md-0 mt-4'>
-                <h2 className='mt-0'>Follow FreeFrom</h2>
+                <h2 className='mt-0' style={{color: "#000"}}>Follow FreeFrom</h2>
                 <div>
                     <a href='https://www.facebook.com/freefrom.org' target='_blank' rel='noopener noreferrer'>
                         <span className='fa-layers fa-fw fa-3x ml-1'>
-                            <FontAwesomeIcon icon={faCircle} color='white' />
+                            <FontAwesomeIcon icon={faCircle} color='black' />
                             <FontAwesomeIcon icon={faFacebookF} color='#47cccc' transform='shrink-6' />
                         </span>
                     </a>
                     <a href='https://twitter.com/freefromorg' target='_blank' rel='noopener noreferrer'>
                         <span className='fa-layers fa-fw fa-3x ml-1'>
-                            <FontAwesomeIcon icon={faCircle} color='white' />
+                            <FontAwesomeIcon icon={faCircle} color='black' />
                             <FontAwesomeIcon icon={faTwitter} color='#47cccc' transform='shrink-6' />
                         </span>
                     </a>
                     <a href='https://www.instagram.com/freefromdotorg' target='_blank' rel='noopener noreferrer'>
                         <span className='fa-layers fa-fw fa-3x ml-1'>
-                            <FontAwesomeIcon icon={faCircle} color='white' />
+                            <FontAwesomeIcon icon={faCircle} color='black' />
                             <FontAwesomeIcon icon={faInstagram} color='#47cccc' transform='shrink-6' />
                         </span>
                     </a>
