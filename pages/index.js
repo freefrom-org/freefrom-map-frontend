@@ -61,19 +61,6 @@ function Home({ states }) {
 
             <>
                 <h2 className='mt-4'>Snapshot of Survivor Financial Security Policies By State</h2>
-                <div className='d-flex flex-column col-12 col-lg-10 p-0'>
-                    <img
-                        className='img-fluid'
-                        src='/images/snapshot-by-state.png'
-                        srcSet='/images/snapshot-by-state-371w.png 371w, /images/snapshot-by-state-742w.png 742w'
-                        alt={
-                            'Snapshot of survivor financial security policies by state; \
-                            Model state: 0 states; financial security friendly: 2 states; \
-                            taking steps: 11 states; some accountability: 17 states; \
-                            little accountability: 21 states'
-                        }
-                    />
-                </div>
                 <Snapshots />
 
                 <h2 className='mt-5'>States to Watch</h2>
