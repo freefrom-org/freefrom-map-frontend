@@ -52,7 +52,7 @@ function State({ categories, stateData }) {
                                             src='/images/quote.png'
                                             width='59px'
                                             height='59px'
-                                            className='p-0 m-0 mr-2'
+                                            className='p-0 m-0 mr-3'
                                         />
                                         <blockquote className='fs-21px'>{quote}</blockquote>
                                     </div>
