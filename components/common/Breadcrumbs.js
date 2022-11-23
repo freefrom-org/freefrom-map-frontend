@@ -13,7 +13,7 @@ export default function Breadcrumbs({ className, text, currentPageTitle }) {
         <div className={`breadcrumbs mt-2 mb-3 ${className}`}>
             <button className={'btn back-button pr-0'} onClick={() => router.push('/')}>
                 {' '}
-                <FontAwesomeIcon icon={faArrowLeft} className={`mr-1 ${styles['take-action-link']}`} /> {text}
+                <FontAwesomeIcon icon={faArrowLeft} width="14" className={`mr-1 ${styles['take-action-link']}`} /> {text}
             </button>
             <span className='mx-2'>/</span>
             <span>{currentPageTitle.replace('-', ' ')}</span>
