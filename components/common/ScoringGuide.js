@@ -55,11 +55,11 @@ const ScoringGuide = () => (
 )
 
 const ScoreDescription = ({ score, type }) => (
-    <div className='score-description mb-4'>
+    <div className='score-description mt-2 mb-4'>
         <div className='mb-2'>
             <ScoreLabel type={type} score={score} />
         </div>
-        <p className='small'>{type === 'category' ? CATEGORY_SCORE_LABELS[score] : OVERALL_SCORE_LABELS[score]}</p>
+        <p className='small mt-3'>{type === 'category' ? CATEGORY_SCORE_LABELS[score] : OVERALL_SCORE_LABELS[score]}</p>
     </div>
 )
 
