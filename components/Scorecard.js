@@ -5,6 +5,7 @@ import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 
 import ScoreLabel from './common/ScoreLabel'
 import { OVERALL_SCORE_LABELS } from '../constants'
+import styles from './Scorecard.module.css'
 
 const resourceLinkType = PropTypes.shape({
     active: PropTypes.bool,
@@ -203,18 +204,17 @@ const Category = ({ category, expanded, onClickExpand, stateData }) => {
                     className='m-0 d-flex flex-row justify-content-between'
                     style={{ textTransform: 'uppercase', fontSize: '0.75em', fontWeight: 300 }}
                 >
-                    <div>
-                        <div className='d-block d-lg-none mt-2'>{category.title}</div>
+                    <div className={`${styles['category-label']}`}>
                         <img
-                            className='img img-fluid mr-4'
+                            className={`img img-fluid ${styles['category-image']}`}
                             src={`../images/policy-category-icons/${categoryImageName}.png`}
                             alt={`${category.title} logo`}
                             height='60px'
                             width='60px'
                         />
-                        <div className='d-none d-lg-inline-flex'>{category.title}</div>
+                        <div className={`${styles['category-title']}`}>{category.title}</div>
                     </div>
-                    <div className='d-flex flex-row justify-content-between mt-2'>
+                    <div className={`${styles['category-expander']}`}>
                         <span className='mr-3'>
                             <ScoreLabel score={categoryScore.grade} type='category' />
                         </span>
