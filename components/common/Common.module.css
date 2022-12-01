@@ -77,3 +77,21 @@
 }
 
 @media (min-width: 1200px) {}
+
+.map-key-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 2rem;
+}
+
+.map-key-item {
+    /* display: inline-block; */
+    padding: 0 0.75em;
+    margin-right: 0.35rem;
+    margin-bottom: 0.35rem;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.7;
+    text-transform: uppercase;
+    white-space: nowrap;
+}

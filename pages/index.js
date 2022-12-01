@@ -9,6 +9,7 @@ import SharedLayout from 'components/SharedLayout'
 import StatesList from 'components/StatesList'
 import Snapshots from 'components/Snapshots'
 import UsMap from 'components/UsMap'
+import styles from "components/common/Common.module.css"
 import { getStates } from 'lib/contentful-api'
 
 function Home({ states }) {
@@ -32,13 +33,13 @@ function Home({ states }) {
                     <div aria-hidden='true' className={`mb-4 ml-3 d-md-flex flex-row justify-content-start${mapClass}`}>
                         <div className='d-flex flex-column'>
                             <h4 className='mb-1'>Key</h4>
-                            <img
-                                className='img-fluid'
-                                src='/images/legend.png'
-                                style={{ maxWidth: '415px' }}
-                                alt='Legend mapping colors to state scores'
-                                loading='lazy'
-                            />
+                            <div className={styles['map-key-container']}>
+                                <span className={styles['map-key-item']} style={{backgroundColor: '#FFB400'}}>Model State</span>
+                                <span className={styles['map-key-item']} style={{backgroundColor: '#00CFCE'}}>Financial Security Friendly</span>
+                                <span className={styles['map-key-item']} style={{backgroundColor: '#AAE5E1'}}>Taking Steps</span>
+                                <span className={styles['map-key-item']} style={{backgroundColor: '#FF9194'}}>Some Accountability</span>
+                                <span className={styles['map-key-item']} style={{backgroundColor: '#FF583D'}}>Little Accountability</span>
+                            </div>
                         </div>
                     </div>
                     <UsMap states={states} />
