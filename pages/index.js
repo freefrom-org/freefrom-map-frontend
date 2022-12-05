@@ -61,8 +61,6 @@ function Home({ states }) {
             </div>
 
             <>
-                <h2 className='mt-4'>Snapshot of Survivor Financial Security Policies By State</h2>
-                <Snapshots />
 
                 <h2 className='mt-5'>States to Watch</h2>
                 <div className='d-flex flex-column col-lg-10 m-0 p-0'>
@@ -158,6 +156,9 @@ function Home({ states }) {
                         </div>
                     </div>
                 </div>
+
+                <h2 className='mt-5'>Snapshot of Survivor Financial Security Policies By State</h2>
+                <Snapshots />
 
                 <h2 className='mt-5'>Snapshot of Survivor Financial Security Policies By Category</h2>
                 <div className='d-flex flex-column col-12 col-lg-10 p-0'>
