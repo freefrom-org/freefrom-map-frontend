@@ -309,12 +309,12 @@ const Scorecard = ({ categories, stateData }) => {
     return (
         <div className='scorecard-container'>
             <div className='overall d-flex flex-wrap mt-4 mb-3'>
-                <span className='label mr-2 mb-2 mb-lg-0'>State Overall Score:</span>
+                <span className='label mr-2 mb-2 mb-lg-0' style={{textTransform: "capitalize"}}>State Overall Score:</span>
                 <ScoreLabel score={stateData.grade} />
             </div>
             <p>{OVERALL_SCORE_LABELS[stateData.grade]}</p>
             <div className='overall d-flex flex-wrap mt-4 mb-3'>
-                <span className='label mr-2'>Breakdown of Score by Category</span>
+                <span className='label mr-2' style={{textTransform: "capitalize"}}>Breakdown of Score by Category</span>
             </div>
             <div className='scorecard accordion' id='scorecard'>
                 {categories.map((category) => {
