@@ -62,9 +62,12 @@ function Home({ states }) {
 
             <>
 
-                <h2 className='mt-5'>States to Watch</h2>
+                <h2 className='mt-5 mt-3'>States to Watch</h2>
                 <div className='d-flex flex-column col-lg-10 m-0 p-0'>
-                    <div className='d-flex flex-row flex-wrap flex-md-nowrap mb-4'>
+                    <div 
+                        className='d-flex flex-row flex-wrap flex-md-nowrap mb-4'
+                        style={{ backgroundColor: '#fff', border: '1px solid #DDDDDD', padding: '1.5rem'}}
+                    >
                         <div className='mb-2 mb-md-0 mr-md-3'>
                             <img
                                 className='state-to-watch-image'
@@ -94,7 +97,10 @@ function Home({ states }) {
                             </a>
                         </div>
                     </div>
-                    <div className='d-flex flex-row flex-wrap flex-md-nowrap mb-4'>
+                    <div 
+                        className='d-flex flex-row flex-wrap flex-md-nowrap mb-4'
+                        style={{ backgroundColor: '#fff', border: '1px solid #DDDDDD', padding: '1.5rem'}}
+                    >
                         <div className='mb-2 mb-md-0 mr-md-3'>
                             <img
                                 className='state-to-watch-image'
@@ -125,7 +131,10 @@ function Home({ states }) {
                             </a>
                         </div>
                     </div>
-                    <div className='d-flex flex-row flex-wrap flex-md-nowrap'>
+                    <div 
+                        className='d-flex flex-row flex-wrap flex-md-nowrap mb-4'
+                        style={{ backgroundColor: '#fff', border: '1px solid #DDDDDD', padding: '1.5rem'}}
+                    >
                         <div className='mb-2 mb-md-0 mr-md-3'>
                             <img
                                 className='state-to-watch-image'
