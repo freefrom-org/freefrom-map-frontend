@@ -25,7 +25,7 @@ export default function Acknowledgments({title, content}) {
 }
 
 Acknowledgments.propTypes = {
-    title: PropTypes.text,
+    title: PropTypes.string,
     content: PropTypes.object
 }
 

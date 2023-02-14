@@ -29,7 +29,7 @@ export default function About({title, content}) {
 }
 
 About.propTypes = {
-    title: PropTypes.text,
+    title: PropTypes.string,
     content: PropTypes.object
 }
 
