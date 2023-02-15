@@ -14,9 +14,9 @@ import Glossary from 'components/common/Glossary'
 import ModalButton from 'components/modal/ModalButton'
 import Scorecard from 'components/Scorecard'
 import { toSlug } from 'utils'
-import { getScores, getCategories, getStateDetails, getStateNames } from 'lib/contentful-api'
+import { getScores, getGlossary, getCategories, getStateDetails, getStateNames } from 'lib/contentful-api'
 
-function State({ scores, categories, stateData }) {
+function State({ scores, glossary, categories, stateData }) {
     const router = useRouter()
     const { state } = router.query
     const { name, quote } = stateData
@@ -69,7 +69,7 @@ function State({ scores, categories, stateData }) {
                             <div className='understanding-report'>
                                 <h2 className='mb-0'>Understanding this report</h2>
                                 <ScoringGuide scores={scores} />
-                                <Glossary />
+                                <Glossary glossary={glossary}/>
                                 <ModalButton href='/methodology' text='Full methodology' />
                             </div>
                         </div>
@@ -83,8 +83,9 @@ function State({ scores, categories, stateData }) {
 
 State.propTypes = {
     scores: PropTypes.array,
+    glossary: PropTypes.array,
     categories: PropTypes.array,
-    stateData: PropTypes.object
+    stateData: PropTypes.object,
 }
 
 export async function getStaticPaths() {
@@ -96,16 +97,18 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const [scores, categories, stateData] = await Promise.all([
+    const [scores, glossary, categories, stateData] = await Promise.all([
         getScores(),
+        getGlossary(),
         getCategories(),
-        getStateDetails({ name: params.state })
+        getStateDetails({ name: params.state }),
     ])
     return {
         props: {
             scores,
+            glossary,
             categories,
-            stateData
+            stateData,
         },
         revalidate: 60 // regenerate the page if it's been more than 1 minute
     }
