@@ -2,31 +2,26 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Modal from '../modal/Modal'
-import ScoreLabel from './ScoreLabel'
+import ScoreLabelNew from './ScoreLabelNew'
 import { CATEGORY_SCORE_LABELS, OVERALL_SCORE_LABELS } from '../../constants/labels'
 
-// TODO: Determine if there's a suitable free icon substitute for this?
-export const EmptySquare = () => (
-    <span className='empty-square-icon' style={{ fontSize: '2em', paddingBottom: '2px' }}>
-        &#9633;
-    </span>
-)
-
-const ScoringGuide = () => (
+const ScoringGuide = ({scores}) => (
     <Modal target='scoring-guide' text='Scoring guide' title='Scoring guide'>
         <div className='container-fluid'>
             <div className='row'>
                 <h4 className='guide-heading'>Overall State Score</h4>
                 <div className='overall scoring-guide'>
-                    {[3, 2, 1, 0, -1].map((score) => (
-                        <ScoreDescription key={score} score={score} />
-                    ))}
+                    {scores
+                        .filter(score => score.scoreType === "State")
+                        .sort((a, b) => b.value - a.value)
+                        .map((score) => <ScoreDescription key={score.value} score={score} />)}
                 </div>
                 <h4 className='guide-heading'>Policy Category Scores</h4>
                 <div className='category scoring-guide'>
-                    {[3, 2, 1, 0, -1].map((score) => (
-                        <ScoreDescription key={score} type='category' score={score} />
-                    ))}
+                {scores
+                        .filter(score => score.scoreType === "Policy")
+                        .sort((a, b) => b.value - a.value)
+                        .map((score) => <ScoreDescription key={score.value} score={score} />)}
                 </div>
                 <h4 className='guide-heading'>Checklist Legend</h4>
                 <div className='checklist-item small mb-2'>
@@ -54,18 +49,33 @@ const ScoringGuide = () => (
     </Modal>
 )
 
-const ScoreDescription = ({ score, type }) => (
+ScoringGuide.propTypes = {
+    scores: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+            scoreType: PropTypes.string.isRequired,
+            value: PropTypes.number.isRequired
+        })
+    ).isRequired
+}
+
+const ScoreDescription = ({ score }) => (
     <div className='score-description mt-2 mb-4'>
         <div className='mb-2'>
-            <ScoreLabel type={type} score={score} />
+            <ScoreLabelNew score={score} />
         </div>
-        <p className='small mt-3'>{type === 'category' ? CATEGORY_SCORE_LABELS[score] : OVERALL_SCORE_LABELS[score]}</p>
+        <p className='small mt-3'>{score.description}</p>
     </div>
 )
 
 ScoreDescription.propTypes = {
-    score: PropTypes.number,
-    type: PropTypes.string
+    score: PropTypes.shape({
+        title: PropTypes.string,
+        description: PropTypes.string,
+        scoreType: PropTypes.string,
+        value: PropTypes.number
+    })
 }
 
 export default ScoringGuide

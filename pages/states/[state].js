@@ -14,9 +14,9 @@ import Glossary from 'components/common/Glossary'
 import ModalButton from 'components/modal/ModalButton'
 import Scorecard from 'components/Scorecard'
 import { toSlug } from 'utils'
-import { getCategories, getStateDetails, getStateNames } from 'lib/contentful-api'
+import { getScores, getCategories, getStateDetails, getStateNames } from 'lib/contentful-api'
 
-function State({ categories, stateData }) {
+function State({ scores, categories, stateData }) {
     const router = useRouter()
     const { state } = router.query
     const { name, quote } = stateData
@@ -68,7 +68,7 @@ function State({ categories, stateData }) {
                             <Scorecard categories={categories} stateData={stateData} />
                             <div className='understanding-report'>
                                 <h2 className='mb-0'>Understanding this report</h2>
-                                <ScoringGuide />
+                                <ScoringGuide scores={scores} />
                                 <Glossary />
                                 <ModalButton href='/methodology' text='Full methodology' />
                             </div>
@@ -82,6 +82,7 @@ function State({ categories, stateData }) {
 }
 
 State.propTypes = {
+    scores: PropTypes.array,
     categories: PropTypes.array,
     stateData: PropTypes.object
 }
@@ -95,12 +96,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const [categories, stateData] = await Promise.all([
+    const [scores, categories, stateData] = await Promise.all([
+        getScores(),
         getCategories(),
         getStateDetails({ name: params.state })
     ])
     return {
         props: {
+            scores,
             categories,
             stateData
         },
