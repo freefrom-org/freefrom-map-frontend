@@ -460,7 +460,7 @@ li > p {
 
 .state-to-watch-image {
   height: auto;
-  width: 125px;
+  width: 200px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
