@@ -3,11 +3,8 @@
 # dependencies
 **/node_modules
 
-# testing
-**/coverage
-
 # production
-**/build
+.next
 
 # misc
 **/.DS_Store
@@ -16,9 +13,6 @@
 **/.env.test.local
 **/.env.production.local
 npm-debug.log*
-
-.idea
-.next
 
 # local cache of backend data for syncing
 scripts/localData
