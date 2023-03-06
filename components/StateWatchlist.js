@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { ReactSVG } from "react-svg";
 
 import { BLOCKS } from "@contentful/rich-text-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -26,11 +27,12 @@ function StateWatchlistItem({ state }) {
       }}
     >
       <div className="mb-2 mb-md-0 mr-md-3">
-        <img
+        <ReactSVG
           loading="lazy"
-          src={`/images/states/${state.name.toLowerCase()}.png`}
-          alt={`Outline of the state of ${state.name}`}
-          className="state-to-watch-image"
+          src={`/images/states/${state.name.toLowerCase()}.svg`}
+          desc={`Outline of the state of ${state.name}`}
+          aria-label={`Outline of the state of ${state.name}`}
+          className={`state-to-watch-image score-${state.grade}`}
         />
       </div>
       <div>
@@ -46,6 +48,7 @@ function StateWatchlistItem({ state }) {
 StateWatchlistItem.propTypes = {
   state: PropTypes.shape({
     name: PropTypes.string,
+    grade: PropTypes.number,
     watchlistContent: PropTypes.shape({
       json: PropTypes.object,
     }),
@@ -67,7 +70,10 @@ StateWatchlist.propTypes = {
   states: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      watchlistContent: PropTypes.object,
+      grade: PropTypes.number,
+      watchlistContent: PropTypes.shape({
+        json: PropTypes.object,
+      }),
     })
   ),
 };
