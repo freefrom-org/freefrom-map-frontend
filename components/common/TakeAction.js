@@ -25,7 +25,7 @@ export default function TakeAction() {
                         <div
                             className={`${styles['take-action-box']}`}
                             key={path}
-                            style={{ backgroundColor: bgd }}x
+                            style={{ backgroundColor: bgd }}
                         >
                             <a className={`${styles['take-action-link']}`} href={path}>
                                 <img

@@ -768,7 +768,7 @@ const StateUpdates = () => {
                             <div className='response' id='mce-success-response' style={{ display: 'none' }}></div>
                         </div>
                         <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden='true'>
-                            <input type='text' name='b_709a0a051cd8a5f3df002da88_54b262f0fa' tabIndex='-1' value='' />
+                            <input type='text' name='b_709a0a051cd8a5f3df002da88_54b262f0fa' tabIndex='-1' defaultValue='' />
                         </div>
                         <div className='clear'>
                             <Submit />
