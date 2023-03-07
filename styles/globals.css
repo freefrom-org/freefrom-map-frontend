@@ -375,23 +375,23 @@ li > p {
   width: fit-content;
 }
 
-.state-to-watch-image.score-3 svg path.cls-1 {
+.state-image.score-3 svg path.cls-1 {
   fill: #FFB600;
 }
 
-.state-to-watch-image.score-2 svg path.cls-1 {
+.state-image.score-2 svg path.cls-1 {
   fill: #47CCCC;
 }
 
-.state-to-watch-image.score-1 svg path.cls-1 {
+.state-image.score-1 svg path.cls-1 {
   fill: #AAE5E1;
 }
 
-.state-to-watch-image.score-0 svg path.cls-1 {
+.state-image.score-0 svg path.cls-1 {
   fill: #FF9797;
 }
 
-.state-to-watch-image.score--1 svg path.cls-1 {
+.state-image.score--1 svg path.cls-1 {
   fill: #F06449;
 }
 

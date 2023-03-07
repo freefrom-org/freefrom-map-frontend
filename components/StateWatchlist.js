@@ -32,7 +32,7 @@ function StateWatchlistItem({ state }) {
           src={`/images/states/${state.name.toLowerCase()}.svg`}
           desc={`Outline of the state of ${state.name}`}
           aria-label={`Outline of the state of ${state.name}`}
-          className={`state-to-watch-image score-${state.grade}`}
+          className={`state-to-watch-image state-image score-${state.grade}`}
         />
       </div>
       <div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import { useRouter } from 'next/router'
+import { ReactSVG } from "react-svg";
 
 import SharedLayout from 'components/SharedLayout'
 import Breadcrumbs from 'components/common/Breadcrumbs'
@@ -19,8 +19,8 @@ import { getScores, getGlossary, getCategories, getStateDetails, getStateNames }
 function State({ scores, glossary, categories, stateData }) {
     const router = useRouter()
     const { state } = router.query
-    const { name, quote } = stateData
-    const imageUrl = '../images/states/' + state + '.png'
+    const { name, quote, grade } = stateData
+
     return (
         <SharedLayout title={name}>
             <div className='state-page'>
@@ -29,7 +29,13 @@ function State({ scores, glossary, categories, stateData }) {
                 <p>How well does {name} support survivors’ financial security?</p>
                 <div className='row'>
                     <div className='col-12 col-md-4'>
-                        <img alt={name} className='img-fluid mb-3' src={imageUrl} />
+                        <ReactSVG
+                            loading="lazy"
+                            src={`/images/states/${name.toLowerCase()}.svg`}
+                            desc={`Outline of the state of ${name}`}
+                            aria-label={`Outline of the state of ${name}`}
+                            className={`img-fluid mb-3 state-image score-${grade}`}
+                        />
                         <h4 aria-hidden='true' className='mb-0'>
                             Key
                         </h4>
