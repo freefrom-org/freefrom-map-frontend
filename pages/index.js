@@ -129,9 +129,7 @@ Home.propTypes = {
   allStates: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      grade: PropTypes.shape({
-        grade: PropTypes.number,
-      }),
+      grade: PropTypes.number,
     })
   ),
   watchlistStates: PropTypes.arrayOf(

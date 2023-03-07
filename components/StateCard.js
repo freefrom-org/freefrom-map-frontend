@@ -29,9 +29,7 @@ StateCard.propTypes = {
     hideLearnMore: PropTypes.bool,
     onLearnMoreClick: PropTypes.func,
     state: PropTypes.shape({
-        grade: PropTypes.shape({
-            grade: PropTypes.number
-        }),
+        grade: PropTypes.number,
         name: PropTypes.string,
         rank: PropTypes.number
     })

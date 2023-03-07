@@ -9,17 +9,17 @@ import styles from './Scorecard.module.css'
 
 const resourceLinkType = PropTypes.shape({
     active: PropTypes.bool,
-    category_id: PropTypes.number,
+    category_id: PropTypes.string,
     deactivated_at: PropTypes.string,
-    id: PropTypes.number,
+    id: PropTypes.string,
     state: PropTypes.string,
     text: PropTypes.string,
     url: PropTypes.string
 })
 
 const honorableMentionType = PropTypes.shape({
-    id: PropTypes.number,
-    category_id: PropTypes.number,
+    id: PropTypes.string,
+    category_id: PropTypes.string,
     description: PropTypes.string,
     text: PropTypes.string,
     url: PropTypes.string
@@ -27,14 +27,14 @@ const honorableMentionType = PropTypes.shape({
 
 const innovativePolicyIdeaType = PropTypes.shape({
     id: PropTypes.number,
-    category_id: PropTypes.number,
+    category_id: PropTypes.string,
     description: PropTypes.string,
     text: PropTypes.string,
     url: PropTypes.string
 })
 
 const categoryType = PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     title: PropTypes.string,
     help_text: PropTypes.string,
     criteria: PropTypes.arrayOf(
@@ -46,12 +46,12 @@ const categoryType = PropTypes.shape({
 })
 
 const criterionScoreType = PropTypes.shape({
-    criterion_id: PropTypes.number,
+    criterion_id: PropTypes.string,
     meets_criterion: PropTypes.string // "yes", "no", "maybe"
 })
 
 const categoryGradeType = PropTypes.shape({
-    category_id: PropTypes.number,
+    category_id: PropTypes.string,
     grade: PropTypes.number
 })
 
@@ -59,9 +59,7 @@ const stateDataType = PropTypes.shape({
     category_grades: PropTypes.arrayOf(categoryGradeType),
     code: PropTypes.string,
     criterion_scores: PropTypes.arrayOf(criterionScoreType),
-    grade: PropTypes.shape({
-        grade: PropTypes.number
-    }),
+    grade: PropTypes.number,
     honorable_mentions: PropTypes.arrayOf(honorableMentionType),
     innovative_policy_ideas: PropTypes.arrayOf(innovativePolicyIdeaType),
     name: PropTypes.string,
@@ -134,7 +132,7 @@ const Policy = ({ policyData, score }) => (
 
 Policy.propTypes = {
     policyData: PropTypes.shape({
-        id: PropTypes.number,
+        id: PropTypes.string,
         title: PropTypes.string,
         adverse: PropTypes.bool
     }),

@@ -89,7 +89,7 @@ function State({ scores, glossary, categories, stateData }) {
 
 State.propTypes = {
     scores: PropTypes.array,
-    glossary: PropTypes.array,
+    glossary: PropTypes.object,
     categories: PropTypes.array,
     stateData: PropTypes.object,
 }
