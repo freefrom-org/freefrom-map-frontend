@@ -55,7 +55,7 @@ export const submitForm = (path) => {
             setStatus({ success: true })
             trackEvent({ category: 'Form', action: 'Submission', label: path })
         } catch (error) {
-            console.log(error)
+            console.error(error)
             setStatus({ success: false })
             setSubmitting(false)
             setErrors({ submit: error.message })

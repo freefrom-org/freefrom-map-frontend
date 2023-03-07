@@ -23,7 +23,6 @@ async function get(path) {
         return JSON.parse(rawData)
     } catch (err) {
         if (err.code !== 'ENOENT') throw err
-        console.log(`fetching ${path}...`)
         const { data } = await axios.get(`${backendEndpoint}/${path}`)
         await fs.writeFile(filePath, JSON.stringify(data, null, 2))
         return data
