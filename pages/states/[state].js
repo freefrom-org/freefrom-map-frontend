@@ -37,7 +37,7 @@ function State({ scores, glossary, categories, stateData }) {
           <div className="col-12 col-md-4">
             <ReactSVG
               loading="lazy"
-              src={`/images/states/${name.toLowerCase()}.svg`}
+              src={`/images/states/${name.replace(" ", "-").toLowerCase()}.svg`}
               desc={`Outline of the state of ${name}`}
               aria-label={`Outline of the state of ${name}`}
               className={`img-fluid mb-3 state-image score-${grade}`}

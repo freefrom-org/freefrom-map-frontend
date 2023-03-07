@@ -375,23 +375,23 @@ li > p {
   width: fit-content;
 }
 
-.state-image.score-3 svg path.cls-1 {
+.state-image.score-3 svg .cls-1 {
   fill: #FFB600;
 }
 
-.state-image.score-2 svg path.cls-1 {
+.state-image.score-2 svg .cls-1 {
   fill: #47CCCC;
 }
 
-.state-image.score-1 svg path.cls-1 {
+.state-image.score-1 svg .cls-1 {
   fill: #AAE5E1;
 }
 
-.state-image.score-0 svg path.cls-1 {
+.state-image.score-0 svg .cls-1 {
   fill: #FF9797;
 }
 
-.state-image.score--1 svg path.cls-1 {
+.state-image.score--1 svg .cls-1 {
   fill: #F06449;
 }
 
